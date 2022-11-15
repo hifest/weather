@@ -13,7 +13,7 @@ export const TenDaysInfo = ():ReactElement =>{
         )
     },[])
     return (
-        <div>піська</div>
+        <div >піська</div>
     )
 
 }
