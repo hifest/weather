@@ -1,9 +1,9 @@
 import React from 'react';
-import ShortInfoWeather from "./modules/ShortInfoWeather/ShortInfoWeather";
+import Page from "./page/Page";
 
 function App() {
   return (
-   <ShortInfoWeather/>
+   <Page/>
   );
 }
 

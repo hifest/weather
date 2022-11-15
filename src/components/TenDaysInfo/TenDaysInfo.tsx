@@ -8,13 +8,12 @@ export const TenDaysInfo = ():ReactElement =>{
     useEffect(()=>{
         dispatch(
             fetchWeatherApi({
-                location: '91.241.123.58',
-                featureDays: 10
+                location: 'London',
             })
         )
     },[])
     return (
-        <div></div>
+        <div>піська</div>
     )
 
 }
