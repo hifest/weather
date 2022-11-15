@@ -1,0 +1,1 @@
+export {TenDaysInfo} from "./TenDaysInfo/TenDaysInfo";
