@@ -1,16 +1,19 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import apiKey from '../service/service';
+import {WeatherData} from "../models/WeatherData";
 
 const initialState = {
-    sity: '',
+    city: '',
     country: '',
     localtime: '',
     tempC: 0,
     maxTempC: 0,
     minTempC: 0,
-    dataLoadingStatus: ''
-}
+    feelsLikeC: 0,
+    dataLoadingStatus: 'loading',
+} as WeatherData
+
 export const fetchWeatherApi = createAsyncThunk(
     'weather/data',
     async (args:{location:string,featureDays?:number,airQuality?: 'no' | 'yes'}) => {
@@ -29,14 +32,20 @@ export const WeatherSlice = createSlice({
     extraReducers: builder => {
         builder
             .addCase(fetchWeatherApi.pending,state =>{
-                state.dataLoadingStatus = 'loading'
+                state.dataLoadingStatus = 'loading';
             })
             .addCase(fetchWeatherApi.fulfilled, (state,action)=>{
-                state.dataLoadingStatus = 'success'
-                console.log(action.payload)//потім добавалю типи і занесу в initialState зараз просто вивожу
+                state.dataLoadingStatus = 'success';
+                state.country = action.payload.location.country;
+                state.city = action.payload.location.name;
+                state.localtime = action.payload.location.localtime;
+                state.tempC = action.payload.current.temp_c;
+                state.maxTempC = action.payload.forecast.forecastday[0].day.maxtemp_c;
+                state.minTempC = action.payload.forecast.forecastday[0].day.mintemp_c;
+                state.feelsLikeC = action.payload.current.feelslike_c;
             })
             .addCase(fetchWeatherApi.rejected,state=>{
-                state.dataLoadingStatus = 'error'
+                state.dataLoadingStatus = 'error';
             })
             .addDefaultCase(() => {})
     }

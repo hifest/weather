@@ -8,12 +8,16 @@ export const TenDaysInfo = ():ReactElement =>{
     useEffect(()=>{
         dispatch(
             fetchWeatherApi({
-                location: 'London',
+                location: '91.241.123.58',
+                featureDays: 1,//обовязково щоб писати мін 1 день,щоб дізнатись яка сьогодні мін та макс температура
+                // airQuality: 'yes'
+
             })
         )
     },[])
+
     return (
-        <div >піська</div>
+        <div>піська</div>
     )
 
 }
