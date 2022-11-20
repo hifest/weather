@@ -1,0 +1,39 @@
+@import '../../sass/variables/variables.scss';
+
+.top_block {
+  position: absolute;
+  width: 230px;
+  height: 225px;
+  left: 288px;
+  top: 109px;
+
+  .this_temp {
+    width: hug(134px);
+    height: hug(122px);
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 122px;
+    margin-bottom: $margin-bottom;
+    color: $lite-background;
+  }
+  .this_weather {
+    width: 230px;
+    height: 29px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: $margin-bottom;
+    color: rgba(49, 73, 133, 1);
+  }
+  .this_city {
+    width: hug(134px);
+    height: hug(122px);
+    font-weight: 400;
+    font-size: 26px;
+    margin-bottom: $margin-bottom;
+    margin-left: 70px;
+  }
+  .this_max_min_temp {
+    margin-left: 70px;
+  }
+}

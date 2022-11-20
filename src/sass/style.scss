@@ -1,1 +1,11 @@
-@import './normalize';
+@import './normalize.scss';
+@import '../sass/variables/variables.scss';
+
+.body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background-attachment: rgba(63, 90, 160, 1);
+}
+.container {
+  background-attachment: rgba(63, 90, 160, 1);
+}
