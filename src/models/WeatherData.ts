@@ -6,5 +6,5 @@ export  interface WeatherData  {
     maxTempC: number,
     minTempC: number,
     feelsLikeC: number,
-    dataLoadingStatus: 'loading' | 'success' | 'error'
+    dataLoadingStatus: 'loading' | 'success' | 'error',
 }
