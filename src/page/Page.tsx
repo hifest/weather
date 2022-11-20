@@ -1,11 +1,19 @@
 import {ReactElement, useEffect} from 'react';
 import {TenDaysInfo} from "../components";
 import {fetchWeatherApi} from "../slices/WeatherApiSlice";
-import {useAppDispatch} from "../hooks/hooks";
+import {useAppDispatch, useAppSelector} from "../hooks/hooks";
+import {fetchIp} from "../slices/GetIpSlice";
 
 export default function Page ():ReactElement {
-
+    const {ip} = useAppSelector(state => state.Ip)
     const dispatch = useAppDispatch()
+
+    useEffect(()=>{
+        dispatch(
+            fetchIp()
+        )
+    },[])
+
     useEffect(()=>{
         dispatch(
             fetchWeatherApi({
@@ -14,7 +22,7 @@ export default function Page ():ReactElement {
                 airQuality: 'yes'
             })
         )
-    },[])
+    },[ip])
     return (
         <div>
          <TenDaysInfo/>

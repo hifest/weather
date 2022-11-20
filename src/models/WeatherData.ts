@@ -1,10 +1,13 @@
-interface tenDaysDayI {
-    maxtemp_c: number,
-    mintemp_c: number
-}
 interface tenDaysArrayI {
     date:string,
-    day: tenDaysDayI
+    day: {
+        maxtemp_c: number,
+        mintemp_c: number,
+        condition: {
+            code: number,
+            icon: string
+        }
+    }
 }
 export  interface WeatherData  {
     city: string,
