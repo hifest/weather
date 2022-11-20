@@ -1,9 +1,37 @@
 .wrapper{
   background: linear-gradient(172.97deg, rgba(78, 93, 132, 0.9) 0.82%, rgba(78, 107, 182, 0.9) 98.83%);
   max-height: 969px;
-  width: 376px;
+  max-width: 326px;
   backdrop-filter: blur(20px);
   border-radius: 35px;
-  padding: 30px 29px 50px 28px;
+  padding: 30px 0 20px 28px;
   margin: 0 auto;
+  &_forecast{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 56px;
+    svg{
+      margin-right: 50px;
+    }
+    &_nameDay{
+      color: white;
+      margin-right: 50px;
+    }
+    &_degBlack{
+      color: rgba(255, 255, 255, 0.5);
+    }
+    &_degWhite{
+      color: white;
+    }
+  }
+  &_info{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    h3{
+      margin-left: 8px;
+    }
+  }
 }
