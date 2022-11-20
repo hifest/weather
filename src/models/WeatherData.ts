@@ -1,3 +1,11 @@
+interface tenDaysDayI {
+    maxtemp_c: number,
+    mintemp_c: number
+}
+interface tenDaysArrayI {
+    date:string,
+    day: tenDaysDayI
+}
 export  interface WeatherData  {
     city: string,
     country: string,
@@ -7,4 +15,5 @@ export  interface WeatherData  {
     minTempC: number,
     feelsLikeC: number,
     dataLoadingStatus: 'loading' | 'success' | 'error',
+    tenDaysArray: tenDaysArrayI[]
 }
