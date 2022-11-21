@@ -30,8 +30,8 @@ export const TenDaysInfo = ():ReactElement =>{
                         <span className={styles.wrapper_forecast_nameDay}>{item.date === new Date().toISOString().split('T')[0] ? 'Сьогодні': getWeekDay(new Date(item.date))}</span>
                         {/*//@ts-ignore*/}
                         <Svg src={hashTableIcon[item.day.condition.code]} height="35px" width='50px'/>
-                        <span className={styles.wrapper_forecast_degBlack}>{item.day.maxtemp_c}°/</span>
-                        <span className={styles.wrapper_forecast_degWhite}>{item.day.mintemp_c}°</span>
+                        <span className={styles.wrapper_forecast_degBlack}>{Math.round(item.day.maxtemp_c)}°/</span>
+                        <span className={styles.wrapper_forecast_degWhite}>{Math.round(item.day.mintemp_c)}°</span>
                     </div>
                 )
             })}
