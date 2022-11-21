@@ -12,8 +12,10 @@ export const TenDaysInfo = ():ReactElement =>{
         1135: 'icons/mist.svg',
         1000: 'icons/sunny.svg',
         1063: 'icons/sunWithRain.svg',
-        1009: 'icons/Cloudy.svg'
-
+        1009: 'icons/Cloudy.svg',
+        1003: 'icons/littleSunny.svg',
+        1198: 'icons/moderateRain.svg',
+        1216: 'icons/moderateSnow.svg'
     }
 
     return (
@@ -27,7 +29,7 @@ export const TenDaysInfo = ():ReactElement =>{
                     <div className={styles.wrapper_forecast} key={item.date}>
                         <span className={styles.wrapper_forecast_nameDay}>{item.date === new Date().toISOString().split('T')[0] ? 'Сьогодні': getWeekDay(new Date(item.date))}</span>
                         {/*//@ts-ignore*/}
-                        <Svg src={hashTableIcon[item.day.condition.code]}/>
+                        <Svg src={hashTableIcon[item.day.condition.code]} height="35px" width='50px'/>
                         <span className={styles.wrapper_forecast_degBlack}>{item.day.maxtemp_c}°/</span>
                         <span className={styles.wrapper_forecast_degWhite}>{item.day.mintemp_c}°</span>
                     </div>
