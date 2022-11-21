@@ -18,7 +18,7 @@ export default function Page ():ReactElement {
     useEffect(()=>{
         dispatch(
             fetchWeatherApi({
-                location: '91.241.123.58',
+                location: ip,
                 featureDays: 10,
                 airQuality: 'yes'
             })
