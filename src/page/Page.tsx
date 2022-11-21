@@ -3,6 +3,7 @@ import {TenDaysInfo} from "../components";
 import {fetchWeatherApi} from "../slices/WeatherApiSlice";
 import {useAppDispatch, useAppSelector} from "../hooks/hooks";
 import {fetchIp} from "../slices/GetIpSlice";
+import styles from './Page.module.scss';
 
 export default function Page ():ReactElement {
     const {ip} = useAppSelector(state => state.Ip)
@@ -24,7 +25,7 @@ export default function Page ():ReactElement {
         )
     },[ip])
     return (
-        <div>
+        <div className={styles.wrapper}>
          <TenDaysInfo/>
         </div>
     )
