@@ -12,7 +12,6 @@ export const LeftSide = (props: Props) => {
         <div className={s.this_weather}>Подекуди хмарно</div>
         <div className={s.this_max_min_temp}>B: 10° H: 3°</div>
       </div>
-      <div className={s.this_day_info}></div>
     </div>
   );
 };

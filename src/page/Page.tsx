@@ -2,10 +2,10 @@ import { ReactElement, useEffect } from 'react';
 import { TenDaysInfo } from '../components';
 import { fetchWeatherApi } from '../slices/WeatherApiSlice';
 import { useAppDispatch } from '../hooks/hooks';
-import { LeftSide } from '../page/LeftSide/LeftSide';
+import { LeftSide } from '../components/LeftSide/LeftSide';
 import s from './Page.module.scss';
-import { Time } from './Card/Time';
-import { Card } from './Card/Card';
+import { Card } from '../components/LeftSide/Times/Card';
+import { Times } from '../components/LeftSide/Times/Times';
 
 export default function Page(): ReactElement {
   const dispatch = useAppDispatch();
@@ -20,9 +20,9 @@ export default function Page(): ReactElement {
   }, []);
   return (
     <div className={s.body}>
-      <TenDaysInfo />
       <LeftSide />
-      <Card />
+      <Times />
+      {/* <TenDaysInfo /> */}
     </div>
   );
 }

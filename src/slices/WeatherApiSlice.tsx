@@ -11,6 +11,7 @@ const initialState = {
     maxTempC: 0,
     minTempC: 0,
     feelsLikeC: 0,
+    tenDaysArray: [],
     dataLoadingStatus: 'loading',
 } as WeatherData
 
@@ -42,6 +43,7 @@ export const WeatherSlice = createSlice({
                 state.maxTempC = action.payload.forecast.forecastday[0].day.maxtemp_c;
                 state.minTempC = action.payload.forecast.forecastday[0].day.mintemp_c;
                 state.feelsLikeC = action.payload.current.feelslike_c;
+                state.tenDaysArray = action.payload.forecast.forecastday
                 state.dataLoadingStatus = 'success';
             })
             .addCase(fetchWeatherApi.rejected,state=>{
