@@ -1,5 +1,5 @@
 import {ReactElement, useEffect} from 'react';
-import {TenDaysInfo} from "../components";
+import {TenDaysInfo, MoreInfo} from "../components";
 import {fetchWeatherApi} from "../slices/WeatherApiSlice";
 import {useAppDispatch, useAppSelector} from "../hooks/hooks";
 import {fetchIp} from "../slices/GetIpSlice";
@@ -27,6 +27,7 @@ export default function Page ():ReactElement {
     return (
         <div className={styles.wrapper}>
          <TenDaysInfo/>
+         <MoreInfo />
         </div>
     )
 
