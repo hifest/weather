@@ -1,3 +1,24 @@
+
 .body {
   background: rgba(63, 90, 160, 0.5);
+}
+
+.wrapper{
+  padding: 44px 55px 68px 50px;
+  background: linear-gradient(89.6deg, #001A5B -0.69%, #3F5AA0 99.7%);
+  height: 100vh;
+  display: flex;
+}
+.left_side {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.left_side_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 68px;
 }

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import WeatherSliceReducer from "../slices/WeatherApiSlice";
+import GetIpSliceReducer from "../slices/GetIpSlice";
 
 const store = configureStore({
     reducer: {
-        Weather: WeatherSliceReducer
+        Weather: WeatherSliceReducer,
+        Ip: GetIpSliceReducer
     },
 })
 

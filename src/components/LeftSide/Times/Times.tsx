@@ -16,7 +16,7 @@ export const Times = (props: Props) => {
   const times: Time[] = [
     {
       time: 'Зараз',
-      icon_id: <Svg src="icons/Cloudy.svg" />,
+      icon_id: <Svg src="icons/Cloudy.svg" height='55px'/>,
       temp: '4',
     },
     {

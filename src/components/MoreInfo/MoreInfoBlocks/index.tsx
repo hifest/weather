@@ -1,0 +1,6 @@
+export { Humidity } from './Humidity'
+export { Precipitation } from './Precipitation'
+export { SunriseAndSunset } from './SunriseAndSunset'
+export { Temp } from './Temp'
+export { UltravioletIndex } from './UltravioletIndex'
+export { WindSpeed } from './WindSpeed'
