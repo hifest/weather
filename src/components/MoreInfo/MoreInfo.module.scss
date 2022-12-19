@@ -1,8 +1,29 @@
 .wrapper {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	gap: 30px;
 
-    .block{
-        
-    }
+	.column {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.block {
+            filter: drop-shadow(2px 4px 40px rgba(0, 0, 0, 0.2));
+			width: 250px;
+            height: 100%;
+			
+			background: linear-gradient(
+				172.97deg,
+				rgba(78, 93, 132, 0.9) 0.82%,
+				rgba(78, 107, 182, 0.9) 98.83%
+			);
+			// backdrop-filter: blur(20px);
+			border-radius: 35px;
+			padding: 35px;
+
+            font-size: 18px;
+            margin-bottom: 6px;
+		}
+	}
 }
+

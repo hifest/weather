@@ -15,12 +15,16 @@ export const MoreInfo = (): ReactElement => {
 	console.log(data)
 	return (
 		<div className={s.wrapper}>
-			<UltravioletIndex />
-			<SunriseAndSunset />
-			<WindSpeed />
-			<Precipitation />
-			<Temp />
-			<Humidity />
+			<div className={s.column}>
+				<UltravioletIndex />
+				<WindSpeed />
+				<Temp />
+			</div>
+			<div className={s.column}>
+				<SunriseAndSunset />
+				<Precipitation />
+				<Humidity />
+			</div>
 		</div>
 	)
 }

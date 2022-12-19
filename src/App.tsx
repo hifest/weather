@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from "./page/Page";
-import './sass/style.scss'
+import './scss/style.scss'
 function App() {
   return (
     <Page/>
