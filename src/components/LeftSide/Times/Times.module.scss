@@ -1,0 +1,46 @@
+@import '../../../sass/variables/variables.scss';
+
+.card {
+  width: 150px;
+  cursor: pointer;
+  display: flex;
+  flex-direction:column;
+  border-radius: 30px;
+
+
+
+  .time {
+    font-size: 20px;
+    line-height: 24.38px;
+    margin-left: 15px;
+    color: $primary_color;
+
+  }
+  .svg_weather {
+    size: 20px;
+    margin-bottom: 10px;
+    height: 60px;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px ;
+  }
+  .temp {
+    font-size: 18px;
+    margin-left: 38px;
+    color: $primary_color;
+  }
+}
+
+.days {
+  height: 200px;
+  max-width: 750px;
+  background: linear-gradient(132.6deg, rgba(63, 90, 160, 0.5) 0%, rgba(98, 114, 148, 0.5) 100%);
+  border: 1px solid rgba(63, 90, 160, 0.5);
+  backdrop-filter: blur(2.5px);
+  border-radius: 35px;
+  display: flex;
+  margin-top: 96px;
+  align-items: center;
+  padding: 23px 24px 23px 28px;
+  justify-content: center;
+}

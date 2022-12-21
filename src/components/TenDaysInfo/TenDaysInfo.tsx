@@ -6,7 +6,6 @@ import s from './TenDaysInfo.module.scss'
 
 export const TenDaysInfo = (): ReactElement => {
 	const { tenDaysArray } = useAppSelector(state => state.Weather)
-	console.log(tenDaysArray)
 
 	const hashTableIcon = {
 		1030: 'icons/mist.svg',
@@ -17,6 +16,7 @@ export const TenDaysInfo = (): ReactElement => {
 		1003: 'icons/littleSunny.svg',
 		1198: 'icons/moderateRain.svg',
 		1216: 'icons/moderateSnow.svg',
+		1219: 'icons/moderateSnow.svg',
 	}
 
 	return (

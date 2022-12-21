@@ -1,10 +1,12 @@
-import React from 'react';
-import Page from "./page/Page";
+import Page from './page/Page'
 import './scss/style.scss'
+
 function App() {
-  return (
-    <Page/>
-  );
+	return (
+		<div className='container'>
+			<Page />
+		</div>
+	)
 }
 
-export default App;
+export default App
